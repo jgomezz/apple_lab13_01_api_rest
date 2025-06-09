@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		859A63BD2DF3DABD00215E4E /* apple-lab13-01-api-rest-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 859A63BC2DF3DABD00215E4E /* apple-lab13-01-api-rest-Info.plist */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		8B5636DA2DF0F04A004B7BD4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		859A63BC2DF3DABD00215E4E /* apple-lab13-01-api-rest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "apple-lab13-01-api-rest-Info.plist"; sourceTree = "<group>"; };
 		8B5636C92DF0F047004B7BD4 /* apple_lab13_01_api_rest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apple_lab13_01_api_rest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B5636D92DF0F04A004B7BD4 /* apple_lab13_01_api_restTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = apple_lab13_01_api_restTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B5636E32DF0F04A004B7BD4 /* apple_lab13_01_api_restUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = apple_lab13_01_api_restUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +84,7 @@
 				8B5636DC2DF0F04A004B7BD4 /* apple_lab13_01_api_restTests */,
 				8B5636E62DF0F04A004B7BD4 /* apple_lab13_01_api_restUITests */,
 				8B5636CA2DF0F047004B7BD4 /* Products */,
+				859A63BC2DF3DABD00215E4E /* apple-lab13-01-api-rest-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				859A63BD2DF3DABD00215E4E /* apple-lab13-01-api-rest-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +405,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"apple_lab13_01_api_rest/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "apple-lab13-01-api-rest-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -426,6 +434,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"apple_lab13_01_api_rest/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "apple-lab13-01-api-rest-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

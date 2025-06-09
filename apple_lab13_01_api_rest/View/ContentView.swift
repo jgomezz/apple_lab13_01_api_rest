@@ -10,12 +10,12 @@ import SwiftUI
 // MARK: - Main Content View
 struct ContentView: View {
     
-    @StateObject private var apiService = PetsAPIService()
+    @StateObject private var petViewModel = PetViewModel()
     
     var body: some View {
         NavigationView {
             VStack {
-                if apiService.isLoading {
+                if petViewModel.isLoading { 
                     VStack {
                         ProgressView()
                             .scaleEffect(1.5)
@@ -24,7 +24,7 @@ struct ContentView: View {
                             .foregroundColor(.secondary)
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                } else if let errorMessage = apiService.errorMessage {
+                } else if let errorMessage = petViewModel.errorMessage {
                     VStack(spacing: 16) {
                         Image(systemName: "exclamationmark.triangle")
                             .font(.system(size: 50))
@@ -39,13 +39,13 @@ struct ContentView: View {
                             .foregroundColor(.secondary)
                         
                         Button("Retry") {
-                            apiService.fetchPets()
+                            petViewModel.loadPetsTask()
                         }
                         .buttonStyle(.borderedProminent)
                     }
                     .padding()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                } else if apiService.pets.isEmpty {
+                } else if petViewModel.pets.isEmpty {
                     VStack(spacing: 16) {
                         Image(systemName: "pawprint.fill")
                             .font(.system(size: 50))
@@ -62,11 +62,11 @@ struct ContentView: View {
                     .padding()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else {
-                    List(apiService.pets) { pet in
+                    List(petViewModel.pets) { pet in
                         PetRowView(pet: pet)
                     }
                     .refreshable {
-                        apiService.fetchPets()
+                        petViewModel.loadPetsTask()
                     }
                 }
             }
@@ -75,14 +75,14 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Refresh") {
-                        apiService.fetchPets()
+                        petViewModel.loadPetsTask()
                     }
-                    .disabled(apiService.isLoading)
+                    .disabled(petViewModel.isLoading)
                 }
             }
         }
         .onAppear {
-            apiService.fetchPets()
+            petViewModel.loadPetsTask()
         }
     }
 }
